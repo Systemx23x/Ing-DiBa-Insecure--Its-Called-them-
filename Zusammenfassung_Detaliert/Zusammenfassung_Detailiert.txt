@@ -1,0 +1,194 @@
+Hi,
+
+Wie Ich Ihnen bereits via Email mitgeteilt habe möchte Ich Ihnen im Folgenden mal die Details nahelegen, damit sie sich ein Bild machen können.
+
+Es ist Alles vorhanden um auch selbst das Example auf Probe zu Machen.
+
+Im ersten Schritt benötigen wir natürlich erstmal eine Basis, diese Liefert uns der "Fake IBAN Generator (No Valid Output).html" im Ordner Online-Ressourcen
+Dieser wird mit den Optionen "Germany" "1000" "TXT" dazu gebracht uns einen Datensatz von 1000 Fake IBANs zu Generieren,diese sind aber nicht Valide, 
+also Sprich die Erwartete Prüfsumme der Modulo Rechnung stimmt
+nicht Überein und somit ist die Prüfung Fehlgeschlagen.Diese Tatsache beachten wir nicht weiter da ZBsp gehen wir Jetzt von dieser Prüfung aus
+
+
+zu prüfende IBAN: DE93500210007535669576
+Diese IBAN hat die richtige Länge für dieses Land (Deutschland).
+Bankleitzahl 50021000: Dieser Bankcode ist korrekt.
+Kontonummer 7535669576: Die Kontonummer enthält eine falsche Prüfziffer. (Details)
+	
+Methode 60, Konto 7535669576, BLZ 50021000, Prüfziffer 6 steht an Position 10, erwartete Prüfziffer: 1. Überblick über die Berechnung: Nimm die Ziffern auf den Positionen 3 bis 9 - hier: 3566957 -, multipliziere sie von rechts nach links mit den Gewichten 2,1,2,1,2,1,2, addiere die Quersummen der Produkte, bilde den Rest der Division durch 10, ziehe das Ergebnis von 10 ab, und das Ergebnis modulo 10 ist die erwartete Prüfziffer.
+
+
+IBAN DE93500210007535669576: Die IBAN-Prüfsumme stimmt.
+Ergebnis
+
+Diese IBAN ist nicht korrekt.
+
+IBAN: DE93500210007535669576   
+BIC: INGBDEFFXXX (Frankfurt am Main)   
+
+Bank: ING Bank
+
+60486 Frankfurt am Main
+
+SEPA Credit Transfer (Überweisung) wird unterstützt.
+
+SEPA Direct Debit (Lastschrift) wird unterstützt.
+
+B2B (Firmenlastschrift) wird unterstützt.
+
+SEPA Instant Credit Transfer (Echtzeitüberweisung) wird unterstützt.
+
+Stand: 1. 5. 2024 (May 1, 2024).
+
+
+
+Haben wir nun eine Ressource die "DE93500210007535669576" aus dieser Fehlerhaften IBAN ganze 9 Valide IBANs erzeugt.
+um das Jetzt auf den Generierten Datensatz zu Beziehen können wir 9x1000 valide IBANs erstellen, also 9.000 Valide Datensätze.
+
+Wie Zeige Ich Ihnen Jetzt anhand unserer Ressource "DE93500210007535669576"
+
+wir betrachten die letzten 10 Stellen der IBAN, die sozusagen die Kontonr. darstellt, und hier ist der Trick am ganzen, die Prüfziffer ist die 10te Stelle somit bleibt diese unverändert
+
+In den 9 Stellen haben wir Jeweils einen 10er Block von 0-9, und in jedem 10er Block steckt 1ne Valide IBAN und das ganze auf den 9 Stellen die die Kontonr. darstellt plus Prüfziffer 10te Stelle
+nun demonstriere ich mal wie ich das ermittle, in diesem Fall nehme Ich die Ressource und Fange bei der vorletzten Stelle an.
+
+dazu erstell ich mir 10 Datensätze die den 10er Block der vorLetzten Stelle darstellen.
+
+DE93500210007535669516
+DE93500210007535669526
+DE93500210007535669536
+DE93500210007535669546
+DE93500210007535669556
+DE93500210007535669566
+DE93500210007535669576
+DE93500210007535669586
+DE93500210007535669596
+DE93500210007535669506 Nr.10 war es gewesen siehe folgender Berechnung
+
+jetzt Prüfe Ich mit "eine IBAN validieren.html" aus dem Ordner Online-Ressourcen, diese 10 Datensätze durch
+
+
+
+
+zu prüfende IBAN: DE93500210007535669506
+
+Diese IBAN hat die richtige Länge für dieses Land (Deutschland).
+Bankleitzahl 50021000: Dieser Bankcode ist korrekt.
+Kontonummer 7535669506: Die Prüfziffer in der Kontonummer stimmt. (Details)
+	
+Methode 60, Konto 7535669506, BLZ 50021000, Prüfziffer 6 steht an Position 10, erwartete Prüfziffer: 6. Überblick über die Berechnung: Nimm die Ziffern auf den Positionen 3 bis 9 - hier: 3566950 -, multipliziere sie von rechts nach links mit den Gewichten 2,1,2,1,2,1,2, addiere die Quersummen der Produkte, bilde den Rest der Division durch 10, ziehe das Ergebnis von 10 ab, und das Ergebnis modulo 10 ist die erwartete Prüfziffer.
+-	
+IBAN DE93500210007535669506: Die IBAN hat eine falsche Prüfsumme.
+Ergebnis
+
+Diese IBAN ist nicht korrekt.
+
+IBAN: DE93500210007535669506   
+BIC: INGBDEFFXXX (Frankfurt am Main)   
+
+Bank: ING Bank
+
+60486 Frankfurt am Main
+
+SEPA Credit Transfer (Überweisung) wird unterstützt.
+
+SEPA Direct Debit (Lastschrift) wird unterstützt.
+
+B2B (Firmenlastschrift) wird unterstützt.
+
+SEPA Instant Credit Transfer (Echtzeitüberweisung) wird unterstützt.
+
+Stand: 1. 5. 2024 (May 1, 2024).
+
+
+
+Hier in dieser Prüfung hatten wir Erfolg, und zwar die Bankleitzahl und die KontoNr. sind Korrekt und diese beiden BLZ KDNR in unserem Falle
+
+50021000
+7535669506
+
+diese beiden und gehen nun auf IBAN Berechnen
+
+und erhalten diese Prüfung
+
+Bankleitzahl: 50021000, Kontonummer: 7535669506, Land: Deutschland
+Bankleitzahl 50021000: Dieser Bankcode existiert.
+Kontonummer 7535669506: Die Prüfziffer in der Kontonummer stimmt. (Was bedeutet das?) (Details)
+Ergebnis
+
+IBAN: DE43500210007535669506
+Papierform: DE43 5002 1000 7535 6695 06    
+BIC: INGBDEFFXXX (Frankfurt am Main)   
+
+Bank: ING Bank
+
+60486 Frankfurt am Main
+
+SEPA Credit Transfer (Überweisung) wird unterstützt.
+
+SEPA Direct Debit (Lastschrift) wird unterstützt.
+
+B2B (Firmenlastschrift) wird unterstützt.
+
+SEPA Instant Credit Transfer (Echtzeitüberweisung) wird unterstützt.
+
+Stand: 1. 5. 2024 (May 1, 2024).
+
+
+Und nun machen wir erneut den IBAN Check und erhalten diese Prüfungsergebnisse
+
+zu prüfende IBAN: DE43500210007535669506
+Diese IBAN hat die richtige Länge für dieses Land (Deutschland).
+Bankleitzahl 50021000: Dieser Bankcode ist korrekt.
+Kontonummer 7535669506: Die Prüfziffer in der Kontonummer stimmt. (Details)
+	
+Methode 60, Konto 7535669506, BLZ 50021000, Prüfziffer 6 steht an Position 10, erwartete Prüfziffer: 6. Überblick über die Berechnung: Nimm die Ziffern auf den Positionen 3 bis 9 - hier: 3566950 -, multipliziere sie von rechts nach links mit den Gewichten 2,1,2,1,2,1,2, addiere die Quersummen der Produkte, bilde den Rest der Division durch 10, ziehe das Ergebnis von 10 ab, und das Ergebnis modulo 10 ist die erwartete Prüfziffer.
+
+IBAN DE43500210007535669506: Die IBAN-Prüfsumme stimmt.
+Ergebnis
+
+Diese IBAN ist formal korrekt.
+
+IBAN: DE43500210007535669506   
+BIC: INGBDEFFXXX (Frankfurt am Main)   
+
+Bank: ING Bank
+
+60486 Frankfurt am Main
+
+SEPA Credit Transfer (Überweisung) wird unterstützt.
+
+SEPA Direct Debit (Lastschrift) wird unterstützt.
+
+B2B (Firmenlastschrift) wird unterstützt.
+
+SEPA Instant Credit Transfer (Echtzeitüberweisung) wird unterstützt.
+
+Stand: 1. 5. 2024 (May 1, 2024).
+
+
+Und jetzt haben wir die Erste Valide (Rechnerisch Formal Valide) IBAN, und im gleichen 
+Verfahren Arbeiten wir dann den nächsten 10er Block eine Stelle weiter ab bis wir die nächste Finden und das ganze Solange bis alle 9 Stellen, ihre Validen Daten Offenbart haben und wir dann im Besitz
+von 9 (Rechnerisch Formal Validen) IBANs sozusagen für jede einzelne 10 Prüfungen max, manachmal sind sie auch unter den ersten dabei das heißt im gesamten zur Maximalen Ausbeutung müssten 
+wir 90 Datensätze erstellen und diese dann einzeln durch Prüfen, um die 9 Rechnerisch Formal Validen IBANs zu erhalten.
+
+Bemerke in jedem einzelnem Block, muss beim wechsel zum nächsten die vorherige Original Nummer wieder hergestellt werden.
+
+Da macht sich doch der angebotene massen Validiator vom IBAN Rechner bezhalt.
+
+
+So erstellen wir uns den Ersten Teil.
+
+Danach Speichern wir uns die 9 IBANs und wenden uns dem "Fake Name Generator.html" im Ordner Online-Ressources zu.
+Und hier erstellen wir uns Einzeln Personendaten nach einander den für 9 IBANs müssen wir "Fake Name Generator.html" in 9 getrennten Tabs Öffnen und 9 verschiedene Identitäten Generieren.
+Diese sind mit einer Temp-Email Adresse verbunden,die nur verwendet werden kann, wenn die Generierte Person bestehen bleibt, dann öffnen wir die Temp-Email weiterleitung und können solange diese
+besteht Emails über diese erhalten. Nach dem Schließen ist diese dann nie wieder Verwendbar und somit unnütz. Aber is gibt ja auch andere Temp-Email Websiten da kann man sich zu jederzeit wenn man eine 
+Wegwerf Email braucht eine machen.
+
+Nun haben wir Eine Fake Person und eine wahrscheinlich nicht Existierende Rechnerisch Formal Valide IBAN mit einem Temp-Mail Postfach mit dem wir Emails empfangen können.
+
+
+Und wie die Screenshots es Belegen können wir uns damit Ohne Probleme ABOs kaufen, und in Online Shops einkaufen und weiß der Geier was Noch, wenn man jetzt Bedenkt das unter 200€ so wars damals keine Prüfung
+statt findet, wir jetzt 9 mal für 180€ Einkaufen und Ware bekommen hätten wir mit geringem Aufwand 1620€ Schaden bei ZBsp dem Online Shop Riesen Reichelt machen können in nicht mal einer Stunde, und ich bin mir ganz sicher
+das dies Auch in vielen weiteren Online Shops möglich sein wird. Doch das ist alles noch nicht Demonstriert und ich wollte ja jeder der 5 Banken andere Betroffene Präsentieren deswegen such ich dann wenn diese Story abgeschlossen
+ist weitere Betroffene, In Ihrem Fall ist Reichelt und MOZ.de Ausreichend für eine Demonstrierung und der Rest bleibt erstmal Theorie und Vermutung bzw Mutmaßung.

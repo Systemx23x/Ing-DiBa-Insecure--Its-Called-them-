@@ -1,0 +1,34 @@
+So kurz und Knackig
+
+MOZ.de und Reichelt sollten ein Verifizierungsverfahren für die Überprüfung der Echtheit der Angegebenen Daten integrieren.
+
+IBAN Rechner sollte die Unbegrenzte Nutzung auf ein Limit setzen das abhängig von der IP zbsp 2-5 Prüfungen pro 24h zulässt 
+(klaro könnte mit einem Proxy,VPN,Tor umgangen werden, entseiden man baut ein erkennungsdienst ein der dann die Nutzung untersagt)
+
+IBAN Rechner Massen Validiierungstool sollte nur für Gewerbliche zwecke mit Identitätsprüfung herrausgegeben werden.
+
+IBAN Rechner sollte Registrierungspflichtig sein und nur Verifizierte Nutzer mit Identitäts Nachweis ZBsp 
+Personalausweiß Kopie etc Sensible Berechnungsdaten wie die Verwendete Modulo Rechnung Anzeigen, um vor Unbekannten verbreitungen dieser zu Schützen, 
+den ein kluges Köpfchen könnte daraus einen Generator erschaffen, wie in dem Präsentierten Fall hier das verständlich geworden ist.
+
+Ing-DiBa könnte auch die Modulo Rechnung überarbeiten, so wie ich bei der Commerzbank vermute, den damals war meine Ressource meine eigene Bankverbindung aus den Ich auch
+in 9 Stellen zu jeh 10er Blöcken aber ohne Umwege Rechnerisch Formal Valide IBANs erstellen konnte, das hatte ich 2023 der Commerzbank mitgeteilt und letzten Monat hab ich einfach
+mal aus Neugierde meine Bankverbindung im selben Schema Verwendet und siehe da nicht eine einzige Valide IBAN mehr daraus entsprungen außer meine Echte Bankverbindung war Valide.
+Sehr schön Commerzbank ist dadurch mit Qualifizierten ITlern in der Lage gewesen, für ein Stück mehr Sicherheit zu Sorgen, das Gefällt mir sehr gut.
+
+Vielleicht sollte man Onlineshops eine berechtigung einräumen,um mit einem von den Banken Entwickelter Lösung im Falle von SEPA Zahlungsmethoden eine gezielte überprüfung der Echtheit und gewährung nur Nutzung
+der SEPA Lastschrift einzuräumen, so mit der Ausgabe Angaben sind Echt, SEPA Lastschrift wird Akzeptiert von Seitens der Kredit Institute, und danach sollte erst dem Kunden die Vereinbarung zur SEPA Lastschrift 
+gebilligt werden, den ein Problem hat sich ja hier Aufgezeigt das deutlich wird in der SEPA Zahlungsmethode wird deutlich zuwenig abgesichert wenn ich mit erfundenen Daten mir Ware Kaufen kann, die Schnellst möglich
+geliefert wird, und 1-3 Tage Später Erfolgt die Zahlungforderung an ein nicht Exsistierendes Konto mit nicht Existierender Person aber die Ware wurde geliefert. Klar ist SEPA eine Einfache bequeme Zahlungsmöglichkeit
+die Unkompliziert ist, und die alle Akzeptiert solange Bezahlt wird.Aber dennoch bietet diese auch ein Risiko das zu missbrauchen,wenn die Zahlungsdaten nicht vorher Überprüft werden.
+Und es gibt natürlich auch sehr Inteliegente Umsetzungen wie zbsp PayPal, die waren damals auch betroffen und haben Zahlungen geleistet trotz angabe Generierter Rechnerisch Formal Validen IBANs mit Kombination meiner Echten
+Existenz nur eingemogelte Schreibfehler, wurde dann Unterbunden und es wurde eine Verifizierung eingeführt und seit diesem Tag funktionierte das bei PayPal nicht mehr,das neulinge ohne Prüfung der Daten sofort nach Registrierung
+bezahlen konnten und das System heute ist Gut umgesetzt und bietet wirklich Hohe Sicherheit und ein breites Zahlungsspecktrum.
+
+Also Ich bin Freund von Giropay,und Echtzeitüberweisungen wenn ich mir etwas Kaufen mag, und das sind meine Lieblingszahlungsmittel die Ich nicht missen möchte.
+
+Aber zum Thema Sofortzahlung über den 3t Dienst dieser hat einen Sehr gravierenden Fehler, wenn mann ZBsp Freitag Geld bekommt,und Samstag mit Sofort Überweisung angenommen sein Komplettes Geld verprasst bei was auch immer,und nach dem Bezahlen, sofort zur Bank geht kann mann am Geldautomaten noch einmal sein Komplettes Geld abheben. Sozusagen hat man dann das Doppelte, aber der Dienst Sperrt dich dann nach dem 3ten Mal. weiß nicht ob das Immer noch
+an dem Ist. Ist mir damals durch zufall aufgefallen als ich die Sofortüberweisung vergessen hatte und mehr Geld abheben konnte als Ich eigentlich noch hatte,funkzioniert aber nur am Wochenende. und bedenken sollte man die sind sehr Konsequent glaub ich werd niewieder diesen Dienst nutzen können xD
+
+
+Vielleicht kann ja einer etwas daraus machen, sind alles kaum bekannte Sachen über welche Ich eigentlich nicht großartig Spreche,aber wieso eigentlich nicht wenns dann erledigt ist.

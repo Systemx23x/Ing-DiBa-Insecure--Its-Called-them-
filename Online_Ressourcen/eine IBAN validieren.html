@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2017 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
+
+
+
+<title>eine IBAN validieren</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="description" content="Prüfen Sie hier eine IBAN. Die Kontonummer und Bankleitzahl werden separat angezeigt und ebenfalls validiert, BIC (SWIFT) wird gesucht. Mit Korrektheitsgarantie. Für die wichtigsten SEPA-Länder.">
+<meta name="keywords" content="IBAN, BIC, IBAN-Rechner, IBAN prüfen, IBAN validieren, BIC suchen, SWIFT">
+<meta name="author" content="Dr. Rainer Typke + Dr. Agatha Walczak-Typke">
+<meta name="robots" content="index, follow">
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta name="imagetoolbar" content="false">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" /script--> 
+<script src="eine%20IBAN%20validieren-Dateien/jquery.min.js"></script> 
+ <link rel="stylesheet" href="eine%20IBAN%20validieren-Dateien/bootstrap.min.css" media="">
+<script src="eine%20IBAN%20validieren-Dateien/bootstrap.min.js"></script>
+<!-- to be called from Consent Tool-->
+<script>var adurl="";var parentelement="";var consentgiven=false;var adloaded=false;var clickioloaded=false;var adsenseloaded=false;var yourCodeToBeCalled=function(){adloaded=true;console.log("yourCodeToBeCalled was just called.");}</script>
+
+<script>function LoadClickio2(){(function(w,d){if(w.clickioloaded){return false;}w.clickioloaded=true;function inject(src){var scr=d.createElement('script');scr.src="//s.clickiocdn.com/t/"+src;var fscr=d.getElementsByTagName('script')[0];fscr.parentNode.insertBefore(scr,fscr);}inject('201928/360_light.js');(w.__lxGc__=w.__lxGc__||{'s':{},'b':0}).cmd=w.__lxGc__.cmd||[];w.__lxGc__.cmd.push(function(){w.__lxGc__.display('theano_top_clickio','_201928','_681555');});})(window,document)}function myLoadJS(){if(!consentgiven){consentgiven=true;if(adurl.length>1){var scriptTag=document.createElement('script');scriptTag.src=adurl;scriptTag.onload=yourCodeToBeCalled;scriptTag.onreadystatechange=yourCodeToBeCalled;console.log("appending "+adurl+" to element "+parentelement);parentelement.appendChild(scriptTag);}else{console.log("nothing done because adurl is not defined");}}else{console.log("nothing done because this appears not  to be the first call");}};</script>
+
+<script>function LoadAdsense(){if(!adsenseloaded){adsenseloaded=true;}}function LoadClickio(){}</script>
+<link rel="stylesheet" type="text/css" href="eine%20IBAN%20validieren-Dateien/A.custom.css.pagespeed.cf.jTMg5JfAHy.css" media=""><!-- Google tag (gtag.js) 
+script async src="https://www.googletagmanager.com/gtag/js?id=G-EEVL85N54M">/script>
+script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EEVL85N54M');
+/script
+    -->
+
+
+<script type="text/javascript" data-description="sourcepoint configuration">!function(){var e=function(){var e,t="__tcfapiLocator",a=[],n=window;for(;n;){try{if(n.frames[t]){e=n;break}}catch(e){}if(n===window.top)break;n=n.parent}e||(!function e(){var a=n.document,r=!!n.frames[t];if(!r)if(a.body){var i=a.createElement("iframe");i.style.cssText="display:none",i.name=t,a.body.appendChild(i)}else setTimeout(e,5);return!r}(),n.__tcfapi=function(){for(var e,t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return a;if("setGdprApplies"===n[0])n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0));else if("ping"===n[0]){var i={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof n[2]&&n[2](i)}else a.push(n)},n.addEventListener("message",(function(e){var t="string"==typeof e.data,a={};try{a=t?JSON.parse(e.data):e.data}catch(e){}var n=a.__tcfapiCall;n&&window.__tcfapi(n.command,n.version,(function(a,r){var i={__tcfapiReturn:{returnValue:a,success:r,callId:n.callId}};t&&(i=JSON.stringify(i)),e.source.postMessage(i,"*")}),n.parameter)}),!1))};"undefined"!=typeof module?module.exports=e:e()}();window._sp_={config:{accountId:1061,baseEndpoint:'https://cdn.privacy-mgmt.com',isSPA:true,targetingParams:{acps:'false'},events:{onConsentReady:function(consentUUID,euconsent,consentStatus){if(consentStatus&&consentStatus.consentedToAll===true){}}}}};</script>
+
+<script type="text/javascript" src="eine%20IBAN%20validieren-Dateien/wrapperMessagingWithoutDetection.js"></script>
+
+<script type="text/javascript" data-description="contentpass integration">(function(){var cpBaseUrl='https://cp.iban-rechner.de';var cpController=cpBaseUrl+'/now.js';var cpPropertyId='7e0755e3';!function(C,o,n,t,P,a,s){C['CPObject']=n;C[n]||(C[n]=function(){(C[n].q=C[n].q||[]).push(arguments)});C[n].l=+new Date;a=o.createElement(t);s=o.getElementsByTagName(t)[0];a.src=P;s.parentNode.insertBefore(a,s)}(window,document,'cp','script',cpController);cp('create',cpPropertyId,{baseUrl:cpBaseUrl});cp('authenticate',function(error,user){if(error){return;}if(user.isLoggedIn()&&user.hasValidSubscription()){window._sp_.config.targetingParams.acps='true';}window._sp_.executeMessaging();});})()</script>
+
+<meta name="google-site-verification" content="VJpNcsiaRGeDx6vmldF2HmatXACsUecDxK4oQyMarGo"><!-- iban-rechnerde.min.js -->
+
+
+<script type="text/javascript">function reposition_skies(){var pageWrapper=jQuery("#langwrapper");var contentWidth=Math.floor(jQuery(pageWrapper).innerWidth());var contentPadding=parseInt(jQuery("#langwrapper").offset().left);var adlWallPaperLeft=contentWidth+contentPadding;var offsetLeft=Math.floor(adlWallPaperLeft);if(offsetLeft<contentWidth){offsetLeft=pageWrapper;}jQuery("#mso_sky").css("position","absolute").css("top","20px").css("left",offsetLeft);}var resizeTimer='';if(window.attachEvent){window.attachEvent("resize",function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(reposition_skies,200);});}else if(window.addEventListener){window.addEventListener("resize",function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(reposition_skies,200);});}</script>
+ <!-- this is the devel. server or C -->
+
+<script>dataLayer=[{"domain":"iban-rechner.de","url":"570"}];</script>
+
+
+<style type="text/css">body .btn-secondary{background-color:#00b9ff;border-color:#00b9ff;color:#fff}body .btn-secondary:hover,body .btn-secondary:focus{border-color:#337ab7;background-color:#337ab7;color:#fff}body .btn-secondary:active,body .btn-secondary:visited,body .btn-secondary:active:focus,body .btn-secondary:active:hover{border-color:#00b9ff;background-color:#00b9ff;color:#fff}body .btn-info{background-color:#6ec0e6;border-color:#6ec0e6;color:#fff}body .btn-info:hover,body .btn-info:focus{border-color:#337ab7;background-color:#337ab7;color:#fff}body .btn-info:active,body .btn-info:visited,body .btn-info:active:focus,body .btn-info:active:hover{border-color:#6ec0e6;background-color:#6ec0e6;color:#fff}</style>
+<script>var uuSymplr,allCookiesSymplr=document.cookie.split(";").map((e=>e.split("="))).reduce(((e,[i,o])=>({...e,[i.trim()]:decodeURIComponent(o)})),{});function createCookieSymplr(e,i){var o=e;if(void 0===(uuSymplr=allCookiesSymplr.uniqueUser)){let e=(Date.now()+window.navigator.userAgent+websiteSymplr).toString();uuSymplr=sha256(e),document.cookie=`uniqueUser=${uuSymplr};max-age=31536000;path=/;SameSite=Strict; Secure`}if(o){var u=allCookiesSymplr.uniqueUserLi;void 0===u&&(u=sha256(i),document.cookie=`uniqueUserLi=${u};max-age=31536000;path=/;SameSite=Strict; Secure`),uuSymplr=u}else document.cookie="uniqueUserLi=; max-age=0"}</script>
+<script defer="defer" src="eine%20IBAN%20validieren-Dateien/iban-rechner.js"></script>
+<!-- this is server http1-1 --><meta name="google-site-verification" content="dPIecwOWdht0SRv_Cs-9wV17On2Y10w6Eur5gAjp5nk"><meta name="referrer" content="same-origin">
+<link rel="me" href="https://johnmastodon.eu/@rainer">
+
+
+</head>
+<body>
+
+
+<div class="dcontainer"> 
+<div id="iban-rechner.de_ad_1"></div>                    
+<div id="iban-rechner.de_ad_2"></div> 
+<div id="iban-rechner.de_ad_3"></div>          
+ </div>
+
+
+
+
+
+<!--div style="text-align:center; margin-left:auto; margin-right:auto">
+<script type="text/javascript">var tsMrk = 'O20pdww("Leaderboard2")';</script>
+
+<span class='O20pdww_end'></span>
+</div-->
+
+<br>
+
+
+<div class="container-fluid"><div class="row row-centered"><div class="col-lg-10">
+
+<div class="container img-rounded" id="contentshell">
+  <div class="row row-centered">
+
+
+
+      <div id="langwrapper" class="container img-rounded">
+      <div id="lang">
+        <div class="liquidlangtop-left"></div>
+        <div class="liquidlangtop-right"></div>
+        <div class="liquidlanginsideleft">
+          <div class="liquidlanginsideright"> 
+            <div class="liquidlanginside">
+              <p class="liquidlangnotopgap">
+		<a class="on">DE</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://www.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="This page in English">EN</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://es.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="Español">ES</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://it.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="Italiano">IT</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://nl.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="Deze pagina in het Nederlands">NL</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://pl.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="Polski">PL</a><span class="orangebullet">&nbsp;♦&nbsp;</span><a href="https://zh.ibancalculator.com/iban_validieren.html?&amp;tx_valIBAN_pi1%5Bfi%5D=fi&amp;tx_valIBAN_pi1%5Biban%5D=DE90500105175423867453" title="Mandarin (simplified)">中文</a>
+              </p>
+              <p class="liquidlangnobottomgap"></p>
+            </div>
+          </div>
+        </div>
+        <div class="liquidlangbottom-left"></div>
+        <div class="liquidlangbottom-right"></div>
+      </div><!-- CLOSE #lang-->
+    </div><!-- cloas #langwrapper-->
+
+
+<div style="display:inline; float:left;  padding: 0 0 0 5px;">
+  <a class="navbar-brand" href="https://www.iban-rechner.de/"><img src="eine%20IBAN%20validieren-Dateien/rect3849.png" alt="Home"></a>
+</div>
+<div style="margin-left:120px; margin-right:10px">
+      <nav class="navbar navbar-default">
+      <div class="container-fluid" id="mainNavig">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </button>
+
+	</div>
+    
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  
+	  
+<ul class="nav  navbar-nav"><li><a title="Kontonummer in IBAN umwandeln, Kontonummer prüfen oder BIC/BLZ suchen" href="https://www.iban-rechner.de/iban_berechnen_bic.html" class="iban_berechnen_bicon">Berechnen</a></li><li><a title="Wenn eine IBAN falsch berechnet wird, übernehmen wir bis zu 25 EUR des Schadens." href="https://www.iban-rechner.de/guarantee.html" class="guarantee">Garantie</a></li><li><a title="oft gestellte Fragen" href="https://www.iban-rechner.de/faq.html" class="faq">FAQ</a></li><li><a title="Kontaktinformationen" href="https://www.iban-rechner.de/contact.html" class="contact">Impressum</a></li><li><a title="Welche Daten werden gespeichert, warum, und wie lange?" href="https://www.iban-rechner.de/privacy.html" class="privacy">Datenschutz</a></li></ul>
+
+    </div><!--
+              /.navbar-collapse
+              /-->
+
+
+
+
+<div class="img-rounded" id="subnavrounded">
+
+
+ <div id="subNav">
+                         
+                            <div class="subNavLinks">    
+
+	<div class="tx-subnav-pi1">
+		<a href="https://www.iban-rechner.de/bic_und_iban.html" title="Aus Kontonummer und Bankleitzahl (oder den entsprechenden nationalen Nummern) die internationale Kontonummer (IBAN) berechnen. Teilweise wird auch die BIC bestimmt." class="subNavLinks">IBAN berechnen</a> <span class="orangepipe">|</span>
+  <a href="https://www.iban-rechner.de/iban_validieren.html" title="Für einige Länder prüfen wir nicht nur die IBAN-Prüfziffern, sondern auch die in der IBAN enthaltene Bankleitzahl und Kontonummer." class="subNavLinks">IBAN prüfen</a> <span class="orangepipe">|</span>
+  <a href="https://www.iban-rechner.de/validate_account_no.html" title="Kontonummern auf die Korrektheit der eventuell enthaltenen Prüfziffern untersuchen." class="subNavLinks">Kontonummer</a> <span class="orangepipe">|</span>
+  <a href="https://www.iban-rechner.de/blz.html" title="Sie können entweder anhand von Bank und Stadt die Bankleitzahl (und BIC) bestimmen oder umgekehrt. Sie müssen dabei die Bank und die Stadt nicht vollständig angeben. Es ist auch möglich, entweder die Stadt oder den Banknamen ganz wegzulassen." class="subNavLinks">BLZ-/BIC-Suche</a> <span class="orangepipe">|</span>
+  <a href="https://www.iban-rechner.de/eu_ueberweisung_pdf.html" title="" class="subNavLinks">EU-Überweisung</a> <span class="orangepipe">|</span>
+  <a href="https://de.finance.yahoo.com/waehrungen/waehrungsrechner/#from=EUR;to=USD;amt=1" class="subNavLinks">Yahoo! Währungsrechner</a>
+	</div>
+	
+                            </div>
+                         
+
+                        </div>
+                      </div>
+
+
+
+
+
+  </div><!--
+            /.container-fluid
+            /-->
+</nav>
+
+</div> <!-- div with margin-left -->
+
+</div> <!-- row? -->
+
+
+
+
+
+
+
+  <div class="row row-eq-height ">
+    <div class="col-md-6 col-md-push-6 img-rounded greybordernotleft">
+  <div style="text-align:center; margin-left:auto; margin-right:auto">
+
+  <!-- ctx. Production/http1_1, lang de, therefore ad D for /1058773/DE_DFP_300x250_tag--><br>
+<div id="sekindoDE">
+<!-- code from Primis - iban-rechner.de_NVU_Validation -->
+<!--script type="text/javascript" language="javascript" src="https://live.primis.tech/live/liveView.php?s=95445&cbuster=[CACHE_BUSTER]&pubUrl=[PAGE_URL_ENCODED]&subId=[SUBID_ENCODED]" data-track-content data-content-name="Primis iban-rechner.de_NVU_Validation" id="sekindoDE" /script-->
+<script type="text/javascript" language="javascript" data-track-content="" data-content-name="Primis iban-rechner.de_NVU_Validation">adurl="https://live.primis.tech/live/liveView.php?s=95445&cbuster=[CACHE_BUSTER]&pubUrl=[PAGE_URL_ENCODED]&subId=[SUBID_ENCODED]";parentelement=document.getElementById("sekindoDE");if(!adloaded&&consentgiven){myLoadJS();}</script>
+<!-- code from Primis -->
+<br>
+</div>
+</div>
+    </div>
+    <div class="col-md-6 col-md-pull-6 img-rounded greyborder">
+
+
+      <h1>IBAN prüfen/Zusatzdaten anzeigen</h1><div class="tx-valIBAN-pi1">
+		<p style="margin:0 0 0 0;">Um zu prüfen, ob eine IBAN korrekt ist, geben Sie sie hier ein und klicken Sie auf den Knopf.</p>
+<br>
+			<form role="form" action="iban_validieren.html" method="post">
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td valign="top" width="270"><p><b>IBAN:</b></p>
+			<input type="text" size="32" name="tx_valIBAN_pi1[iban]" autocomplete="off"><br>
+<br clear="all">
+		<input type="hidden" name="tx_valIBAN_pi1[fi]" value="fi">
+<input type="hidden" name="no_cache" value="1">
+
+			
+<button type="submit" class="btn btn-primary" name="Action" value="IBAN prüfen und BIC-Code suchen" title=" IBAN prüfen und BIC-Code suchen ">IBAN prüfen und BIC-Code suchen</button><br><br>
+
+		</td>
+		<td width="12" rowspan="1">&nbsp;&nbsp;</td>
+
+	</tr>
+	
+
+</tbody></table></form><!-- 127.0.0.1 seems to be your address -->
+	</div>
+	
+    </div>
+  </div>
+
+
+  <div class="row row-eq-height ">
+    <div class="col-md-12 img-rounded greyborder  hidden-xs">
+      <div style="text-align:center; margin-left:auto; margin-right:auto; min-height:270px">
+	<h2>Profi-Version</h2><ul><li><a href="https://www.iban-bic.com/csv_mass.html" target="_blank">Massen-Berechnungen</a> (CSV, XLS)</li>
+<li><a href="https://www.iban-bic.com/withoutsoap.html" target="_blank">REST-Interface.</a></li>
+<li><a href="https://www.iban-bic.com/data.html" target="_blank">Daten</a>.</li>
+<li><b>Willkommens - Bonuspunkte</b> zum kostenlosen Ausprobieren.</li>
+<p>&nbsp;</p></ul><p><a href="https://www.iban-bic.com/" target="_blank"><b>Anmeldung für Profi-Version...</b></a>
+</p>
+<p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+
+
+    </div> <!-- /container -->
+
+
+
+
+</div> <!-- /col -->
+
+<!--div id="mso_sky">
+ </div--> <!-- /col-lg -->
+</div></div>  <!-- /row /container-fluid -->
+
+
+
+
+<div style="text-align: center; color: #fff; padding: 5px 0px 0px 0px;">
+
+	   <div id="footer">
+ 
+<a href="https://www.iban-rechner.de/contact.html" style="color: white">Impressum</a> | <a href="https://www.iban-rechner.de/privacy.html" style="color: white">Datenschutz</a> | <a href="#" onclick="window._sp_.loadPrivacyManagerModal(445510)" style="color: white">Cookies für Werbung erlauben oder verbieten</a>
+ <br><a href="https://www.iban-rechner.de/contact.html" style="color: white">Copyright © 2023 Telauges OÜ</a><br><br><br><br><br>
+ <!--div  style="color: #fff;"><a href="http://www.theano.de/">Theano GmbH</a></div-->
+	   </div>
+
+	   </div>
+
+
+
+
+
+
+
+<!-- Matomo -->
+<script type="text/javascript">var _paq=window._paq||[];_paq.push(["setCookieDomain","*.iban-rechner.de"]);_paq.push(['setCustomDimension',2,'http1_1']);_paq.push(['trackPageView']);_paq.push(['trackAllContentImpressions']);_paq.push(['enableLinkTracking']);(function(){var u="//pw.ibanbic.com/";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setSiteId','2']);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.type='text/javascript';g.async=true;g.defer=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);})();</script>
+
+
+<!---->
+
+
+
+
+
+</body></html>
